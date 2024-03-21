@@ -2,6 +2,8 @@ body, html {
   height: 100%;
   margin: 0;
   overflow: hidden;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #BB8FCE;
 }
 
 .container {
@@ -16,16 +18,28 @@ body, html {
 
 #message {
   font-size: 24px;
+  font-weight: bold;
   text-align: center;
 }
 
 #flowers {
-  width: 50rem;
-  height: 50rem;
-  background-image: url('yellow_flower.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 40rem ; 
+  margin: 0 ;
 }
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  #message {
+    font-size: 18px; /* Reducir el tamaño del texto para dispositivos móviles */
+    text-align: center;
+  }
+
+  #flowers {
+    width: 100%; /* Hacer que el ancho sea 100% del contenedor para dispositivos móviles */
+    font-weight: bold;
+    margin: 0 auto; /* Centrar el elemento en dispositivos móviles */
+  }
+}
+
 
 #confetti {
   position: absolute;
